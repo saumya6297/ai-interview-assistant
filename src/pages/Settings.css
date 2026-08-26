@@ -1,0 +1,184 @@
+.save-btn {
+
+    width: 220px;
+    height: 48px;
+
+    border: none;
+    border-radius: 12px;
+
+    background: linear-gradient(135deg, #22c55e, #16a34a);
+
+    color: white;
+
+    font-size: 16px;
+    font-weight: 600;
+
+    cursor: pointer;
+
+    display: block;
+    margin: 30px auto 10px;
+
+    transition: .3s;
+}
+
+.save-btn:hover {
+
+    transform: translateY(-3px);
+    box-shadow: 0 10px 25px rgba(34, 197, 94, .35);
+
+}
+
+.logout-btn {
+
+    width: 180px;
+    height: 45px;
+
+    border: none;
+    border-radius: 12px;
+
+    background: linear-gradient(135deg, #2fac8f, #2fa692);
+
+    color: rgb(218, 233, 230);
+
+    font-size: 15px;
+    font-weight: 600;
+
+    cursor: pointer;
+
+    display: block;
+    margin: 15px auto 0;
+
+    transition: .3s;
+}
+
+.logout-btn:hover {
+
+    transform: translateY(-3px);
+    box-shadow: 0 10px 25px rgba(239, 68, 68, .35);
+
+}
+
+.setting-title {
+
+    font-size: 22px;
+
+    font-weight: 700;
+
+    margin-top: 30px;
+
+    margin-bottom: 15px;
+
+
+    color: #222;
+
+}
+
+.setting-select {
+
+    width: 150px;
+
+    padding: 10px;
+
+    border-radius: 10px;
+
+    border: 1px solid #ddd;
+
+    font-size: 15px;
+
+    cursor: pointer;
+
+}
+
+.settings-card {
+
+    width: 100%;
+    max-width: 900px;
+
+    margin: 0 auto;
+    background: white;
+
+    border-radius: 25px;
+
+    padding: 45px;
+
+    box-shadow: 0 15px 35px rgba(0, 0, 0, .12);
+
+}
+
+.settings-page {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 40px;
+}
+
+.setting-box {
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    padding: 18px 22px;
+
+    margin: 20px 0;
+
+
+    background: #e6ebf0;
+
+    border-radius: 15px;
+
+    border: 1px solid #96addc;
+
+    transition: .3s;
+
+}
+
+.setting-box:hover {
+
+    transform: translateY(-3px);
+
+    background: #f1fff7;
+
+    box-shadow: 0 8px 18px rgba(0, 0, 0, .08);
+
+}
+
+.setting-left {
+
+    display: flex;
+
+
+    align-items: center;
+
+    gap: 20px;
+
+    font-size: 17px;
+
+    font-weight: 600;
+
+}
+
+.settings-card h1 {
+
+    font-size: 48px;
+
+    margin-bottom: 8px;
+
+    text-align: center;
+
+}
+
+.settings-subtitle {
+
+    text-align: center;
+
+    color: #666;
+
+    margin-bottom: 35px;
+
+    font-size: 18px;
+
+}

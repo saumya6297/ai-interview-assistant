@@ -1,0 +1,26 @@
+rules_version = '2';
+
+service cloud.firestore {
+  match /databases/{database}/documents {
+
+    // User document
+    match /users/{userId} {
+    
+      allow read, write: if request.auth != null
+      && request.auth.uid == userId;
+
+      // User's interview history (subcollection)
+      match /interviews/{interviewId} {
+        allow read, write: if request.auth != null
+        && request.auth.uid == userId;
+      }
+    }
+
+    // Old collection (optional - backward compatibility)
+    match /interviews/{userId} {
+      allow read, write: if request.auth != null
+      && request.auth.uid == userId;
+    }
+
+  }
+}

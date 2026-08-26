@@ -1,0 +1,192 @@
+/* ==========================
+SIDEBAR
+========================== */
+
+.sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+
+
+    width: 290px;
+    height: 100vh;
+
+    background: linear-gradient(180deg, #22c55e, #15803d);
+
+    color: #fff;
+
+    padding: 24px 18px;
+
+    display: flex;
+    flex-direction: column;
+
+    box-shadow: 8px 0 30px rgba(0, 0, 0, .25);
+
+    overflow-y: auto;
+    overflow-x: hidden;
+
+    scrollbar-width: none;
+
+    transition: .35s;
+
+
+}
+
+.sidebar::-webkit-scrollbar {
+    display: none;
+}
+
+/* ==========================
+LOGO
+========================== */
+
+.logo {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+
+    margin-bottom: 34px;
+    padding: 0 6px;
+
+
+}
+
+.logo-left {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.logo-icon {
+    font-size: 28px;
+}
+
+.logo h2 {
+    font-size: 28px;
+    font-weight: 700;
+    line-height: 1.1;
+    color: #fff;
+}
+
+/* ==========================
+MENU BUTTON
+========================== */
+
+.sidebar-toggle {
+    width: 42px;
+    height: 42px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, .18);
+    border: 1px solid rgba(255, 255, 255, .25);
+    color: white;
+
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    cursor: pointer;
+
+    font-size: 22px;
+
+    transition: .3s;
+
+
+}
+
+.sidebar-toggle:hover {
+    transform: rotate(90deg) scale(1.08);
+    background: rgba(255, 255, 255, .28);
+}
+
+/* ==========================
+MENU
+========================== */
+
+.sidebar nav {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    flex: 1;
+}
+
+/* ==========================
+LINKS
+========================== */
+
+.sidebar nav a {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+
+
+    text-decoration: none;
+    color: white;
+
+    padding: 15px 18px;
+
+    border-radius: 16px;
+
+    font-size: 18px;
+    font-weight: 600;
+
+    transition: .3s;
+
+}
+
+.sidebar nav a:hover {
+    background: rgba(255, 255, 255, .14);
+    transform: translateX(6px);
+}
+
+.sidebar nav a.active {
+    background: white;
+    color: #16a34a;
+    box-shadow: 0 12px 25px rgba(0, 0, 0, .18);
+}
+
+.sidebar nav svg {
+    font-size: 23px;
+    min-width: 23px;
+}
+
+/* ==========================
+COLLAPSED
+========================== */
+
+.sidebar.collapsed {
+    width: 92px;
+}
+
+.sidebar.collapsed .logo h2,
+.sidebar.collapsed nav span {
+    display: none;
+}
+
+.sidebar.collapsed .logo {
+    justify-content: center;
+}
+
+.sidebar.collapsed nav a {
+    justify-content: center;
+    padding: 15px 0;
+}
+
+/* ==========================
+MOBILE
+========================== */
+
+@media(max-width:900px) {
+
+    .sidebar {
+        width: 260px;
+        z-index: 1000;
+    }
+
+    .sidebar.collapsed {
+        width: 86px;
+    }
+
+
+}

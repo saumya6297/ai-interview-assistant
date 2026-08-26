@@ -1,0 +1,149 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #f4f6fb;
+}
+
+/* Layout */
+
+.history-layout {
+    display: flex;
+    min-height: 100vh;
+}
+
+.history-content {
+    flex: 1;
+    padding: 35px;
+    overflow-x: hidden;
+}
+
+.history-container {
+    width: 100%;
+    max-width: 1500px;
+    margin: auto;
+}
+
+.my-card {
+    width: 100%;
+    background: #1f1f1f;
+    border-radius: 28px;
+    padding: 40px;
+    box-shadow: 0 15px 40px rgba(0, 0, 0, .25);
+}
+
+.my-card h1 {
+    text-align: center;
+    color: #10b981;
+    font-size: 48px;
+    margin-bottom: 30px;
+}
+
+.top-controls {
+    display: flex;
+    gap: 20px;
+    margin: 30px 0;
+    align-items: center;
+}
+
+.search-box {
+    flex: 1;
+    height: 58px;
+    border: 2px solid #b7f3d7;
+    border-radius: 16px;
+    padding: 0 20px;
+    font-size: 17px;
+}
+
+.filter-box {
+    width: 180px;
+    height: 58px;
+    border: 2px solid #b7f3d7;
+    border-radius: 16px;
+    padding: 0 15px;
+}
+
+.result-box {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+.interview-history-card {
+    background: white;
+    border-radius: 22px;
+    padding: 25px;
+    box-shadow: 0 10px 30px rgba(16, 185, 129, .12);
+}
+
+.history-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+}
+
+.history-header h2 {
+    color: #047857;
+}
+
+.feedback-box {
+    margin-top: 20px;
+    padding: 18px;
+    background: #ecfdf5;
+    border-left: 5px solid #10b981;
+    border-radius: 15px;
+}
+
+.answer-card {
+    margin-top: 18px;
+    padding: 18px;
+    background: #f8fffc;
+    border-radius: 15px;
+}
+
+.back-btn,
+.archive-btn {
+    border: none;
+    border-radius: 14px;
+    padding: 14px 30px;
+    color: white;
+    cursor: pointer;
+}
+
+.back-btn {
+    background: #10b981;
+}
+
+.archive-btn {
+    background: #ef4444;
+}
+
+@media(max-width:900px) {
+
+    .history-layout {
+        flex-direction: column;
+    }
+
+    .history-content {
+        padding: 20px;
+    }
+
+    .top-controls {
+        flex-direction: column;
+    }
+
+    .search-box,
+    .filter-box {
+        width: 100%;
+    }
+
+    .my-card {
+        padding: 25px;
+    }
+
+}
