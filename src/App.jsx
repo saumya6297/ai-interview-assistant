@@ -5,7 +5,6 @@ import Signup from "./pages/Signup";
 import Dashboard from "./pages/Dashboard";
 import Interview from "./pages/Interview";
 import MyInterviews from "./pages/MyInterviews";
-// import Resume from "./pages/Resume";
 import Profile from "./pages/Profile";
 import Settings from "./pages/Settings";
 import ArchivedInterviews from "./pages/ArchivedInterviews";
@@ -29,7 +28,7 @@ function App() {
           <Route path="/dashboard" element={<Dashboard />} />
           <Route path="/interview" element={<Interview />} />
           <Route path="/my-interviews" element={<MyInterviews />} />
-          {/* <Route path="/resume" element={<Resume />} /> */}
+
           <Route path="/profile" element={<Profile />} />
           <Route path="/settings" element={<Settings />} />
           <Route

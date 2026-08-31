@@ -55,7 +55,7 @@ function Interview() {
         try {
 
             const response = await fetch(
-                "http://localhost:5000/generate-questions",
+                "https://ai-interview-assistant-backend-w0lj.onrender.com/generate-questions",
                 {
                     method: "POST",
 
@@ -254,7 +254,7 @@ function Interview() {
                 const feedbackResponse = await fetch(
 
 
-                    "http://localhost:5000/generate-feedback",
+                    "https://ai-interview-assistant-backend-w0lj.onrender.com/generate-feedback",
 
 
                     {
