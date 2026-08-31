@@ -440,6 +440,72 @@ body {
 
 }
 
+
+
+/* Dark Mode Toggle inside Welcome Card */
+
+.welcome-card .theme-toggle {
+    position: absolute;
+    top: 20px;
+    right: 25px;
+
+    width: 55px;
+    height: 28px;
+
+    border: none;
+    border-radius: 30px;
+
+    background: rgba(255, 255, 255, 0.35);
+
+    padding: 2px;
+
+    display: flex;
+    align-items: center;
+
+    cursor: pointer;
+
+    z-index: 10;
+
+    transition: 0.3s;
+}
+
+.welcome-card .toggle-circle {
+    width: 24px;
+    height: 24px;
+
+    border-radius: 50%;
+
+    background: #ffffff;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 13px;
+
+    transition: 0.3s;
+
+    transform: translateX(0);
+}
+
+.welcome-card .theme-toggle.on {
+    background: rgba(0, 0, 0, 0.35);
+}
+
+.welcome-card .theme-toggle.on .toggle-circle {
+    transform: translateX(27px);
+}
+
+
+
+
+
+
+
+
+
+
+
 /* Start */
 
 .start-btn {
@@ -623,5 +689,247 @@ body {
 ::-webkit-scrollbar-thumb:hover {
 
     background: #16a34a;
+
+}
+
+
+/* ==========================================
+   DARK MODE
+========================================== */
+
+body.dark-mode {
+    background: #111827;
+    color: #f9fafb;
+}
+
+body.dark-mode .dashboard-content {
+    background: #111827;
+}
+
+body.dark-mode .dashboard-card {
+    background: #1f2937;
+}
+
+body.dark-mode .stat-card {
+    background: #1f2937;
+    border-color: #374151;
+    box-shadow: 0 5px 18px rgba(0, 0, 0, .25);
+}
+
+body.dark-mode .stat-card h3 {
+    color: #d1d5db;
+}
+
+body.dark-mode .email {
+    color: #d1d5db;
+}
+
+body.dark-mode .quote-card {
+    background: #29251a;
+}
+
+body.dark-mode .quote-card p {
+    color: #d1d5db;
+}
+
+body.dark-mode .dark-mode-toggle {
+    background: #374151;
+    color: #ffffff;
+}
+
+body.dark-mode .dashboard-loading {
+    background: #111827;
+    color: #22c55e;
+}
+
+
+/* ==========================================
+   MOBILE RESPONSIVE DASHBOARD
+========================================== */
+
+@media (max-width: 900px) {
+
+    /* Sidebar ke liye space kam */
+    .dashboard-content {
+        margin-left: 92px;
+        padding: 12px;
+    }
+
+    .dashboard-card {
+        padding: 18px;
+        border-radius: 20px;
+    }
+
+    /* Welcome Card */
+    .welcome-card {
+        padding: 25px 20px;
+        border-radius: 20px;
+        min-height: auto;
+    }
+
+    .welcome-left h1 {
+        font-size: 30px;
+        line-height: 1.3;
+    }
+
+    .welcome-left p {
+        font-size: 15px;
+        line-height: 1.6;
+    }
+
+    .today-date {
+        font-size: 14px;
+    }
+
+    .welcome-email {
+        margin-top: 18px;
+        font-size: 14px;
+        max-width: 100%;
+        word-break: break-word;
+    }
+
+    .welcome-right {
+        width: 100%;
+        margin-top: 20px;
+    }
+
+    .robot-circle {
+        width: 110px;
+        height: 110px;
+        font-size: 55px;
+    }
+
+    /* Stats */
+    .stats-container {
+        grid-template-columns: 1fr;
+        gap: 15px;
+        margin-top: 15px;
+    }
+
+    .stat-card {
+        padding: 18px;
+        gap: 15px;
+    }
+
+    .stat-icon {
+        width: 52px;
+        height: 52px;
+        font-size: 24px;
+    }
+
+    .stat-card h3 {
+        font-size: 14px;
+    }
+
+    .stat-card h1 {
+        font-size: 28px;
+    }
+}
+
+
+/* ==========================================
+   SMALL MOBILE
+========================================== */
+
+@media (max-width: 600px) {
+
+    .dashboard-content {
+        margin-left: 0;
+        padding: 10px;
+        padding-bottom: 20px;
+    }
+
+    .dashboard-card {
+        padding: 12px;
+        border-radius: 18px;
+    }
+
+    .welcome-card {
+        padding: 22px 16px;
+        text-align: center;
+    }
+
+    .welcome-left h1 {
+        font-size: 25px;
+    }
+
+    .welcome-left p {
+        font-size: 14px;
+    }
+
+    .today-date {
+        font-size: 13px;
+    }
+
+    .welcome-email {
+        font-size: 13px;
+        padding: 8px 12px;
+    }
+
+    .robot-circle {
+        width: 90px;
+        height: 90px;
+        font-size: 45px;
+    }
+
+    .stats-container {
+        gap: 12px;
+    }
+
+    .stat-card {
+        padding: 15px;
+        border-radius: 15px;
+    }
+
+    .stat-icon {
+        width: 46px;
+        height: 46px;
+        font-size: 21px;
+    }
+
+    .stat-card h3 {
+        font-size: 13px;
+        margin-bottom: 4px;
+    }
+
+    .stat-card h1 {
+        font-size: 25px;
+    }
+}
+
+
+/* ==========================================
+   VERY SMALL PHONES
+========================================== */
+
+@media (max-width: 380px) {
+
+    .dashboard-content {
+        padding: 7px;
+    }
+
+    .dashboard-card {
+        padding: 9px;
+    }
+
+    .welcome-card {
+        padding: 18px 12px;
+    }
+
+    .welcome-left h1 {
+        font-size: 22px;
+    }
+
+    .welcome-left p {
+        font-size: 13px;
+    }
+
+    .stat-card {
+        padding: 12px;
+    }
+
+    .stat-card h1 {
+        font-size: 22px;
+    }
 
 }

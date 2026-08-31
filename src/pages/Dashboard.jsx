@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
-import { signOut } from "firebase/auth";
+// import { signOut } from "firebase/auth";
 import Sidebar from "../component/Sidebar";
 // import Navbar from "../component/Navbar";
 // import {
@@ -33,6 +33,11 @@ function Dashboard() {
     });
 
     const navigate = useNavigate();
+    const [darkMode, setDarkMode] = useState(false);
+    const toggleDarkMode = () => {
+        setDarkMode(!darkMode);
+        document.body.classList.toggle("dark-mode");
+    };
 
     // const [userData, setUserData] = useState(null);
 
@@ -149,7 +154,7 @@ function Dashboard() {
         );
 
     }
-   
+
 
 
     return (
@@ -162,6 +167,18 @@ function Dashboard() {
                 <Navbar user={userData} /> */}
 
                 <div className="dashboard-page">
+                    {/* ```jsx
+                    <button
+                        className={`theme-toggle ${darkMode ? "on" : ""}`}
+                        onClick={toggleDarkMode}
+                        aria-label="Toggle dark mode"
+                    >
+                        <span className="toggle-circle">
+                            {darkMode ? "🌙" : "☀️"}
+                        </span>
+                    </button> */}
+                    
+
 
                     <div className="dashboard-container">
 
@@ -170,6 +187,23 @@ function Dashboard() {
                             <div className="dashboard-card">
 
                                 <div className="welcome-card">
+
+
+
+                                    {/* Dark Mode Toggle */}
+                                    <button
+                                        className={`theme-toggle ${darkMode ? "on" : ""}`}
+                                        onClick={toggleDarkMode}
+                                        aria-label="Toggle dark mode"
+                                    >
+                                        <span className="toggle-circle">
+                                            {darkMode ? "🌙" : "☀️"}
+                                        </span>
+                                    </button>
+
+
+
+
 
                                     <div className="welcome-left">
 

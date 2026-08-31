@@ -33,17 +33,19 @@ function ForgotPassword() {
 
         } catch (error) {
 
-            if (error.code === "auth/user-not-found") {
+            console.log("Reset Password Error:", error.code);
 
-                setError("❌ Email doesn't exist.");
-
-            } else if (error.code === "auth/invalid-email") {
+            if (error.code === "auth/invalid-email") {
 
                 setError("❌ Please enter a valid email address.");
 
+            } else if (error.code === "auth/too-many-requests") {
+
+                setError("⚠️ Too many requests. Please try again later.");
+
             } else {
 
-                setError("❌ Unable to send reset email. Please try again.");
+                setError("❌ Unable to process your request. Please try again.");
 
             }
 
